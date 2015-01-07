@@ -28,4 +28,16 @@ Navigate to the [Gradle](http://www.gradle.org/) project (e.g., `path/to/gradle-
 
 Call the `run` task (e.g. `sh gradlew run`).
 
+### Expected output:
 
+```
+Downloading http://services.gradle.org/distributions/gradle-2.2-bin.zip
+............................................................................
+Unzipping /home/demouser/.gradle/wrapper/dists/gradle-2.2-bin/1qpl4qfgl1m63bs47m4bicq4n2/gradle-2.2-bin.zip to /home/demouser/.gradle/wrapper/dists/gradle-2.2-bin/1qpl4qfgl1m63bs47m4bicq4n2
+Set executable permissions for: /home/demouser/.gradle/wrapper/dists/gradle-2.2-bin/1qpl4qfgl1m63bs47m4bicq4n2/gradle-2.2/bin/gradle
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:run
+Yes, Gradle works :-)
+```
