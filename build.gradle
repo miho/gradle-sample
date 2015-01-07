@@ -1,0 +1,27 @@
+// we use the java plugin to compile java code
+apply plugin: 'java'
+
+// source compatibility and encoding configuration
+sourceCompatibility = '1.7'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+// gradle wrapper (no need to manually install gradle)
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2'
+}
+
+// project main class
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'eu.mihosoft.gradlesample.Main'
+}
+
+// add the main-class attribute to the jar file
+jar {
+    manifest { attributes 'Main-Class': mainClass }
+}
+
+// run configuration
+task run(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = mainClass;
+}
